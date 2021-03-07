@@ -8,6 +8,15 @@ import 'element-plus/lib/theme-chalk/index.css';
 import ElementPlus from 'element-plus';
 app.use(ElementPlus, { size: 'small' });
 
+// echarts
+import * as echarts from 'echarts/core';
+import { PieChart } from 'echarts/charts';
+import { LegendComponent, TooltipComponent } from 'echarts/components';
+import { CanvasRenderer } from 'echarts/renderers';
+import VueEcharts from 'vue-echarts';
+echarts.use([PieChart, LegendComponent, TooltipComponent, CanvasRenderer]);
+app.component('v-chart', VueEcharts);
+
 // global
 import './styles/index.less';
 
