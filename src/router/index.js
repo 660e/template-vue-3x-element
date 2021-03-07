@@ -11,6 +11,8 @@ export const constantRoutes = [
   demoRouter
 ];
 
+export const asyncRoutes = [];
+
 const router = createRouter({
   history: createWebHashHistory(),
   routes: constantRoutes,
