@@ -11,11 +11,11 @@ export default {
     {
       path: 'chart',
       component: () => import('@/views/demo/chart.vue')
+    },
+    {
+      path: 'dialog',
+      component: () => import('@/views/demo/dialog.vue')
     }
-    // {
-    //   path: 'dialog',
-    //   component: () => import('@/views/demo/dialog.vue')
-    // },
     // {
     //   path: 'filters',
     //   component: () => import('@/views/demo/filters.vue')
