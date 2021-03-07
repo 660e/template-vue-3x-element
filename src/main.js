@@ -1,12 +1,16 @@
 import { createApp } from 'vue';
 import App from './App.vue';
 
+import i18n from './i18n';
+import router from './router';
+import store from './store';
+
 const app = createApp(App);
 
 // element-plus
 import 'element-plus/lib/theme-chalk/index.css';
 import ElementPlus from 'element-plus';
-app.use(ElementPlus, { size: 'small' });
+app.use(ElementPlus, { size: 'small', i18n: i18n.global.t });
 
 // echarts
 import * as echarts from 'echarts/core';
@@ -24,12 +28,4 @@ app.config.globalProperties.$filters = filters;
 // global
 import './styles/index.less';
 
-// router
-import router from './router';
-app.use(router);
-
-// store
-import store from './store';
-app.use(store);
-
-app.mount('#app');
+app.use(i18n).use(router).use(store).mount('#app');

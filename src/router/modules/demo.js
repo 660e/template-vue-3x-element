@@ -23,11 +23,11 @@ export default {
     {
       path: 'form',
       component: () => import('@/views/demo/form.vue')
+    },
+    {
+      path: 'i18n',
+      component: () => import('@/views/demo/i18n.vue')
     }
-    // {
-    //   path: 'i18n',
-    //   component: () => import('@/views/demo/i18n.vue')
-    // },
     // {
     //   path: 'keep-alive',
     //   component: () => import('@/views/demo/keep-alive.vue'),
