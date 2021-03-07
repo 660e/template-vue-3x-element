@@ -17,6 +17,10 @@ import VueEcharts from 'vue-echarts';
 echarts.use([PieChart, LegendComponent, TooltipComponent, CanvasRenderer]);
 app.component('v-chart', VueEcharts);
 
+// filters
+import * as filters from './filters';
+app.config.globalProperties.$filters = filters;
+
 // global
 import './styles/index.less';
 

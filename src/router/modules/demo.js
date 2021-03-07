@@ -15,11 +15,11 @@ export default {
     {
       path: 'dialog',
       component: () => import('@/views/demo/dialog.vue')
+    },
+    {
+      path: 'filters',
+      component: () => import('@/views/demo/filters.vue')
     }
-    // {
-    //   path: 'filters',
-    //   component: () => import('@/views/demo/filters.vue')
-    // },
     // {
     //   path: 'form',
     //   component: () => import('@/views/demo/form.vue')
