@@ -38,10 +38,10 @@ export default {
     {
       path: 'mock',
       component: () => import('@/views/demo/mock.vue')
+    },
+    {
+      path: 'table',
+      component: () => import('@/views/demo/table.vue')
     }
-    // {
-    //   path: 'table',
-    //   component: () => import('@/views/demo/table.vue')
-    // }
   ]
 };

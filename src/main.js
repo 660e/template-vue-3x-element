@@ -24,6 +24,10 @@ import VueEcharts from 'vue-echarts';
 echarts.use([PieChart, LegendComponent, TooltipComponent, CanvasRenderer]);
 app.component('v-chart', VueEcharts);
 
+// ccc
+import CccTable from '@/components/ccc-table.vue';
+app.component('ccc-table', CccTable);
+
 // filters
 import * as filters from './filters';
 app.config.globalProperties.$filters = filters;
