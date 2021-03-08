@@ -27,14 +27,14 @@ export default {
     {
       path: 'i18n',
       component: () => import('@/views/demo/i18n.vue')
+    },
+    {
+      path: 'keep-alive',
+      component: () => import('@/views/demo/keep-alive.vue'),
+      meta: {
+        keepAlive: true
+      }
     }
-    // {
-    //   path: 'keep-alive',
-    //   component: () => import('@/views/demo/keep-alive.vue'),
-    //   meta: {
-    //     keepAlive: true
-    //   }
-    // },
     // {
     //   path: 'mock',
     //   component: () => import('@/views/demo/mock.vue')

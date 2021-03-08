@@ -6,10 +6,12 @@
       </el-menu>
     </el-aside>
     <el-main>
-      <keep-alive>
-        <router-view v-if="$route.meta.keepAlive"></router-view>
-      </keep-alive>
-      <router-view v-if="!$route.meta.keepAlive"></router-view>
+      <router-view v-slot="{ Component }">
+        <keep-alive>
+          <component v-if="$route.meta.keepAlive" :is="Component"></component>
+        </keep-alive>
+        <component v-if="!$route.meta.keepAlive" :is="Component"></component>
+      </router-view>
     </el-main>
   </el-container>
 </template>
