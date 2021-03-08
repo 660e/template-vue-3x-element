@@ -7,6 +7,9 @@ import store from './store';
 
 const app = createApp(App);
 
+// mock
+import './mock';
+
 // element-plus
 import 'element-plus/lib/theme-chalk/index.css';
 import ElementPlus from 'element-plus';

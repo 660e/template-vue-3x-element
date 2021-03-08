@@ -34,11 +34,11 @@ export default {
       meta: {
         keepAlive: true
       }
+    },
+    {
+      path: 'mock',
+      component: () => import('@/views/demo/mock.vue')
     }
-    // {
-    //   path: 'mock',
-    //   component: () => import('@/views/demo/mock.vue')
-    // },
     // {
     //   path: 'table',
     //   component: () => import('@/views/demo/table.vue')
