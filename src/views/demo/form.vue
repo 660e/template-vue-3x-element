@@ -75,7 +75,7 @@ export default {
 .el-form {
   width: 300px;
 }
-.el-form-item /deep/ .el-form-item__error {
+.el-form-item :deep(.el-form-item__error) {
   width: 200px;
   line-height: 32px;
   padding: 0 0 0 10px;

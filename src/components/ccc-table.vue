@@ -79,7 +79,7 @@ export default {
   justify-content: flex-end;
   .el-pagination {
     padding: 0;
-    /deep/ .btn-next {
+    :deep(.btn-next) {
       margin-right: 0;
     }
   }
