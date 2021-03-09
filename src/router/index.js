@@ -1,5 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
+import Layout from '@/layout';
+
 import demoRouter from './modules/demo.js';
 
 // TODO 401 404
@@ -11,12 +13,21 @@ export const constantRoutes = [
   demoRouter
 ];
 
-export const asyncRoutes = [];
+export const asyncRoutes = [
+  {
+    path: '/demo',
+    component: Layout,
+    children: [
+      {
+        path: 'permission',
+        component: () => import('@/views/demo/permission.vue')
+      }
+    ]
+  }
+];
 
-const router = createRouter({
+export default createRouter({
   history: createWebHashHistory(),
   routes: constantRoutes,
   scrollBehavior: () => ({ x: 0, y: 0 })
 });
-
-export default router;
