@@ -42,6 +42,10 @@ export default {
     {
       path: 'table',
       component: () => import('@/views/demo/table.vue')
+    },
+    {
+      path: 'transition',
+      component: () => import('@/views/demo/transition.vue')
     }
   ]
 };

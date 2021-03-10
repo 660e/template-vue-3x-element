@@ -7,10 +7,12 @@
     </el-aside>
     <el-main>
       <router-view v-slot="{ Component }">
-        <keep-alive>
-          <component v-if="$route.meta.keepAlive" :is="Component"></component>
-        </keep-alive>
-        <component v-if="!$route.meta.keepAlive" :is="Component"></component>
+        <transition name="layout">
+          <keep-alive v-if="$route.meta.keepAlive">
+            <component :is="Component"></component>
+          </keep-alive>
+          <component v-else :is="Component"></component>
+        </transition>
       </router-view>
     </el-main>
   </el-container>
@@ -46,5 +48,11 @@ export default {
     line-height: 40px;
     text-align: right;
   }
+}
+.layout-enter-active {
+  transition: opacity 0.5s ease;
+}
+.layout-enter-from {
+  opacity: 0;
 }
 </style>
