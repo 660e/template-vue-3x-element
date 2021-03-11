@@ -1,7 +1,6 @@
-import { asyncRoutes, constantRoutes } from '@/router';
+import { constantRoutes } from '@/router';
 
 function filter() {
-  window.console.log(asyncRoutes); // TODO
   return constantRoutes.find(e => e.path === '/demo').children.map(e => e.path);
 }
 

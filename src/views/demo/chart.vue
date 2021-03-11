@@ -1,5 +1,5 @@
 <template>
-  <v-chart :option="option"></v-chart>
+  <div id="demo"></div>
 </template>
 
 <script>
@@ -45,12 +45,15 @@ export default {
         ]
       }
     };
+  },
+  mounted() {
+    this.$echarts.init(document.getElementById('demo')).setOption(this.option);
   }
 };
 </script>
 
 <style lang="less" scoped>
-.echarts {
+#demo {
   height: 400px;
   width: 400px;
 }
