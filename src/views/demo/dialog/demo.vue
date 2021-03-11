@@ -1,5 +1,5 @@
 <template>
-  <el-dialog v-model="dialogVisible" :close-on-click-modal="false" title="弹窗" width="300px">
+  <el-dialog v-model="dialogVisible" title="弹窗" width="300px">
     <el-input v-model="input"></el-input>
     <template #footer>
       <el-button @click="close">取消</el-button>
