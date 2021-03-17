@@ -6,8 +6,8 @@
     <el-form-item label="密码" prop="password">
       <el-input v-model="forms.password" clearable></el-input>
     </el-form-item>
-    <el-form-item label="确认密码" prop="verifyPassword">
-      <el-input v-model="forms.verifyPassword" clearable></el-input>
+    <el-form-item label="确认密码" prop="confirmPassword">
+      <el-input v-model="forms.confirmPassword" clearable></el-input>
     </el-form-item>
     <el-form-item label="标签">
       <el-input v-model="forms.tag" clearable></el-input>
@@ -22,8 +22,8 @@
 export default {
   data() {
     const validatePassword1 = (rule, value, callback) => {
-      if (this.forms.verifyPassword !== '') {
-        this.$refs.forms.validateField('verifyPassword');
+      if (this.forms.confirmPassword !== '') {
+        this.$refs.forms.validateField('confirmPassword');
         callback();
       }
     };
@@ -40,7 +40,7 @@ export default {
       forms: {
         phone: '',
         password: '',
-        verifyPassword: '',
+        confirmPassword: '',
         tag: ''
       },
       rules: {
@@ -52,7 +52,7 @@ export default {
           { required: true, message: '必填', trigger: ['blur', 'change'] },
           { validator: validatePassword1, trigger: ['blur', 'change'] }
         ],
-        verifyPassword: [
+        confirmPassword: [
           { required: true, message: '必填', trigger: ['blur', 'change'] },
           { validator: validatePassword2, trigger: ['blur', 'change'] }
         ]
