@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-button @click="openDialog">打开弹窗</el-button>
+    <el-button type="primary" @click="openDialog">打开弹窗</el-button>
     <demo-dialog ref="demoDialog" @confirm="onConfirm"></demo-dialog>
   </div>
 </template>

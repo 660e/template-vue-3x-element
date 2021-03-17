@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-button @click="toggle = !toggle">过渡</el-button>
+    <el-button type="primary" @click="toggle = !toggle">过渡</el-button>
     <transition name="demo" mode="out-in">
       <h1 v-if="toggle">{{ toggle }}</h1>
       <h1 v-else>{{ toggle }}</h1>

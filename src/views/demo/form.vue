@@ -13,7 +13,7 @@
       <el-input v-model="forms.tag" clearable></el-input>
     </el-form-item>
     <el-form-item>
-      <el-button @click="submit">提交</el-button>
+      <el-button type="primary" @click="submit">提交</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -45,15 +45,15 @@ export default {
       },
       rules: {
         phone: [
-          { required: true, message: '必填', trigger: 'blur' },
+          { required: true, message: '必填', trigger: ['blur', 'change'] },
           { pattern: /^1[3|4|5|7|8][0-9]{9}$/, message: '格式错误', trigger: ['blur', 'change'] }
         ],
         password: [
-          { required: true, message: '必填', trigger: 'blur' },
+          { required: true, message: '必填', trigger: ['blur', 'change'] },
           { validator: validatePassword1, trigger: ['blur', 'change'] }
         ],
         verifyPassword: [
-          { required: true, message: '必填', trigger: 'blur' },
+          { required: true, message: '必填', trigger: ['blur', 'change'] },
           { validator: validatePassword2, trigger: ['blur', 'change'] }
         ]
       }

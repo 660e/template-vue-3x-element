@@ -1,7 +1,7 @@
 <template>
   <div>
-    <el-button @click="changeLanguage('zh-cn')">中文</el-button>
-    <el-button @click="changeLanguage('en')">English</el-button>
+    <el-button type="primary" @click="changeLanguage('zh-cn')">中文</el-button>
+    <el-button type="primary" @click="changeLanguage('en')">English</el-button>
     <h1>{{ $t('demo.hello') }}</h1>
   </div>
 </template>
