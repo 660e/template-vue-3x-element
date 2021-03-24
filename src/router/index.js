@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 
 import Layout from '@/layout';
+import Login from '@/login';
 
 import demoRouter from './modules/demo.js';
 
@@ -10,9 +11,14 @@ export const constantRoutes = [
     path: '/',
     redirect: '/demo'
   },
+  {
+    path: '/login',
+    component: Login
+  },
   demoRouter
 ];
 
+// TODO
 export const asyncRoutes = [
   {
     path: '/demo',

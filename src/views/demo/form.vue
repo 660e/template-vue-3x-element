@@ -74,12 +74,12 @@ export default {
 <style lang="less" scoped>
 .el-form {
   width: 300px;
-}
-.el-form-item :deep(.el-form-item__error) {
-  width: 200px;
-  line-height: 32px;
-  padding: 0 0 0 10px;
-  top: 0;
-  left: 100%;
+  .el-form-item:deep(.el-form-item__error) {
+    width: 200px;
+    line-height: 32px;
+    padding: 0 0 0 10px;
+    top: 0;
+    left: 100%;
+  }
 }
 </style>
