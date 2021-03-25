@@ -1,6 +1,6 @@
 <template>
   <div>
-    <ccc-table :options="options" :sources="tableData" @change="onChange"></ccc-table>
+    <pro-table :options="options" :sources="tableData" @change="onChange"></pro-table>
   </div>
 </template>
 

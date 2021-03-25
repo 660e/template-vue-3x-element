@@ -24,8 +24,8 @@ echarts.use([PieChart, LegendComponent, TooltipComponent, CanvasRenderer]);
 app.config.globalProperties.$echarts = echarts;
 
 // ccc
-import CccTable from '@/components/ccc-table.vue';
-app.component('ccc-table', CccTable);
+import ProTable from '@/components/pro-table.vue';
+app.component('pro-table', ProTable);
 
 // filters
 import * as filters from './filters';

@@ -1,5 +1,5 @@
 <template>
-  <div class="ccc-table">
+  <div class="pro-table">
     <el-table :data="sources" v-loading="loading" border stripe>
       <!-- columns -->
       <template v-for="c in options.columns">
@@ -26,7 +26,7 @@
       </el-table-column>
     </el-table>
     <!-- pagination -->
-    <div class="ccc-table__pagination" v-if="options.pagination">
+    <div class="pro-table__pagination" v-if="options.pagination">
       <el-pagination
         :total="options.pagination.total"
         :current-page="options.pagination.page"
@@ -42,7 +42,7 @@
 
 <script>
 export default {
-  name: 'ccc-table',
+  name: 'pro-table',
   props: {
     options: {
       type: Object,
@@ -73,7 +73,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.ccc-table__pagination {
+.pro-table__pagination {
   padding-top: 20px;
   display: flex;
   justify-content: flex-end;
