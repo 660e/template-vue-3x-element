@@ -86,7 +86,7 @@ export default {
   },
   methods: {
     getRandomuserData(page) {
-      demoApi.getRandomuserData(10, page, 'ccc').then(response => {
+      demoApi.getRandomuserData(10, page, 'pro').then(response => {
         this.tableData = response.data.results.map(e => {
           return {
             name: `${e.name.first} ${e.name.last}`,

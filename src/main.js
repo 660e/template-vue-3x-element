@@ -23,7 +23,7 @@ import { CanvasRenderer } from 'echarts/renderers';
 echarts.use([PieChart, LegendComponent, TooltipComponent, CanvasRenderer]);
 app.config.globalProperties.$echarts = echarts;
 
-// ccc
+// pro-component
 import ProTable from '@/components/pro-table.vue';
 app.component('pro-table', ProTable);
 
