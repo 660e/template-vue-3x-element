@@ -24,16 +24,19 @@
 </template>
 
 <script>
+import { constantRoutes } from '@/router';
 export default {
   data() {
     return {
-      menus: this.$store.getters.permission_routes,
+      menus: [],
       activeIndex: this.$route.path
     };
   },
   mounted() {
     if (!this.loggedIn()) {
       this.logout();
+    } else {
+      this.menus = constantRoutes.find(e => e.path === '/demo').children.map(e => e.path);
     }
   },
   methods: {
