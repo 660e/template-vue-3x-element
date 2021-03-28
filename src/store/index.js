@@ -1,11 +1,12 @@
 import { createStore } from 'vuex';
 
-import permissionModules from './modules/permission.js';
+import vuexModules from './modules/vuex.js';
+
 import getters from './getters.js';
 
 export default createStore({
   modules: {
-    permission: permissionModules
+    vuex: vuexModules
   },
   getters
 });

@@ -46,6 +46,10 @@ export default {
     {
       path: 'transition',
       component: () => import('@/views/demo/transition.vue')
+    },
+    {
+      path: 'vuex',
+      component: () => import('@/views/demo/vuex.vue')
     }
   ]
 };

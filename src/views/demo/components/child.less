@@ -1,0 +1,20 @@
+.child {
+  border: 1px #eee solid;
+  height: 100px;
+  margin-top: 20px;
+  padding: 20px;
+  position: relative;
+  &::before {
+    color: #ccc;
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  h1 {
+    padding-bottom: 10px;
+  }
+}
